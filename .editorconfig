@@ -1,0 +1,16 @@
+root = true
+
+[*]
+indent_style = tab
+trim_trailing_whitespace = true
+
+[*.html]
+indent_style = space
+indent_size = 4
+
+[*.toml]
+quote_type = double
+
+[{*.yml,*.yaml}]
+indent_style = space
+indent_size = 2

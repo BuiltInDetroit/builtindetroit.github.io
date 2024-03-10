@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+{{ $pages := union .RegularPages .Sections }}
+{{ if .IsHome }}
+{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ end }}
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+    {{ range $pages }}
+
+    <div class="flex flex-col">
+        <a class="h-full no-underline bg-light-layer-01 dark:bg-dark-layer-01 text-light-text-primary dark:text-dark-text-primary hover:bg-light-layer-hover-01 hover:dark:bg-dark-layer-hover-01 transition hover:duration-fast-01 ease-in-out"
+            href="{{ .Permalink }}">
+            <div class="basis-1/2">
+                <div>
+                    <img class="my-0" {{ with .Resources.Get .Params.tile_image }} src="{{ .Permalink }}" {{ end }}
+                        alt="{{ .Params.tile_image_alt }}" />
+                </div>
+            </div>
+            <div class="flex flex-col p-8 basis-1/2 min-h-80">
+                <h3 class="!mt-0 flex-grow">{{
+                    .Title }}</h3>
+
+                <p class="mb-0">
+                    {{ .Summary }}
+                </p>
+            </div>
+        </a>
+    </div>
+
+    {{ end }}
+
+</section>
+
+{{ end }}

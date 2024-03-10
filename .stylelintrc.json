@@ -1,0 +1,20 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["extends", "tailwind"]
+      }
+    ],
+    "color-function-notation": null,
+    "comment-empty-line-before": null,
+    "comment-whitespace-inside": null,
+    "custom-property-empty-line-before": null,
+    "declaration-property-value-no-unknown": true,
+    "function-no-unknown": null,
+    "function-url-quotes": null,
+    "no-descending-specificity": null,
+    "rule-empty-line-before": ["always", { "ignore": ["after-comment", "first-nested"] }]
+  }
+}

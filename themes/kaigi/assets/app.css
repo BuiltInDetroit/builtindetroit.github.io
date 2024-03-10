@@ -1,0 +1,635 @@
+/* stylelint-disable block-no-empty */
+/*
+ * Kaigi
+ * Simple, clean Hugo theme designed for events and workshops.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+
+  html {
+    @apply bg-transparent;
+  }
+
+  body {
+    -webkit-tap-highlight-color: transparent;
+
+    @apply bg-light-background;
+    @apply dark:bg-dark-background;
+  }
+
+  /*******************
+	 * Font faces
+	 *******************/
+
+  @font-face {
+    font-family: 'IBM Plex Serif';
+    font-style: normal;
+    font-weight: bold;
+    src:
+      url('fonts/IBMPlexSerif-Bold.woff2') format('woff2'),
+      url('fonts/IBMPlexSerif-Bold.woff') format('woff'),
+      url('fonts/IBMPlexSerif-Bold.ttf') format('truetype'),
+      url('fonts/IBMPlexSerif-Bold.svg#IBMPlexSerif-Bold') format('svg');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: bold;
+    src:
+      url('/fonts/IBMPlexMono-Bold.woff2') format('woff2'),
+      url('/fonts/IBMPlexMono-Bold.woff') format('woff'),
+      url('/fonts/IBMPlexMono-Bold.ttf') format('truetype'),
+      url('/fonts/IBMPlexMono-Bold.svg#IBMPlexMono-Bold') format('svg');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: italic;
+    font-weight: bold;
+    src:
+      url('/fonts/IBMPlexMono-BoldItalic.woff2') format('woff2'),
+      url('/fonts/IBMPlexMono-BoldItalic.woff') format('woff'),
+      url('/fonts/IBMPlexMono-BoldItalic.ttf') format('truetype'),
+      url('/fonts/IBMPlexMono-BoldItalic.svg#IBMPlexMono-BoldItalic') format('svg');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: bold;
+    src:
+      url('/fonts/IBMPlexSans-Bold.woff2') format('woff2'),
+      url('/fonts/IBMPlexSans-Bold.woff') format('woff'),
+      url('/fonts/IBMPlexSans-Bold.ttf') format('truetype'),
+      url('/fonts/IBMPlexSans-Bold.svg#IBMPlexSans-Bold') format('svg');
+    font-display: swap;
+  }
+}
+
+@layer components {
+  /*******************
+	 * Buttons
+	 *******************/
+
+  .btn-primary {
+    @apply rounded-md bg-light-button-primary px-7 py-4 text-sm text-white no-underline duration-fast-01 hover:bg-light-button-primary-hover active:bg-light-button-primary-active dark:bg-dark-button-primary dark:hover:bg-dark-button-primary-hover dark:active:bg-dark-button-primary-active;
+  }
+
+  /*******************
+	 * Links
+	 *******************/
+
+  .link {
+    @apply no-underline underline-offset-2 hover:underline;
+  }
+
+  /*******************
+	 * Code block
+	 *******************/
+
+  /* PreWrapper */
+  .highlight,
+  .chroma,
+  .lntable,
+  .lntable tbody,
+  .lntable tr {
+    display: inherit;
+    grid-template-columns: inherit;
+    grid-column: inherit;
+
+    @apply col-start-1;
+  }
+
+  /* Other */
+  .chroma .x {
+  }
+
+  /* Error */
+  .chroma .err {
+    @apply text-light-text-error;
+    @apply dark:text-dark-text-error;
+    @apply bg-light-background-high-contrast;
+    @apply dark:bg-dark-background-high-contrast;
+  }
+
+  /* CodeLine */
+  .chroma .cl {
+  }
+
+  /* LineLink */
+  .chroma .lnlinks {
+    @apply text-light-text-secondary;
+    @apply dark:text-dark-text-secondary;
+    @apply link outline-none;
+  }
+
+  /* LineTableTD */
+  .chroma .lntd {
+    @apply m-0 border-0 p-0 align-top;
+  }
+
+  /* Line Number Table Column */
+  .chroma .lntd:first-child {
+    @apply col-span-1;
+  }
+
+  /* Source Code */
+  .chroma .lntd:last-child {
+    /* TODO: Responsive */
+    @apply col-span-15;
+  }
+
+  /* LineTable */
+  .chroma .lntable {
+    @apply m-0 table-fixed border-spacing-0 border-0 p-0;
+  }
+
+  /* LineHighlight */
+  .chroma .hl {
+    background-color: #900;
+  }
+
+  /* LineNumbersTable */
+  .chroma .lnt {
+    @apply text-light-text-secondary;
+    @apply dark:text-dark-text-secondary;
+    @apply mr-2 select-none whitespace-pre px-2 py-0;
+  }
+  /* LineNumbers */
+  .chroma .ln {
+    @apply text-light-text-secondary;
+    @apply dark:text-dark-text-secondary;
+    @apply mr-2 select-none whitespace-pre px-2 py-0;
+  }
+
+  /* Line */
+  .chroma .line {
+    @apply flex;
+  }
+
+  /* Keyword */
+  .chroma .k {
+    @apply text-cyan-500;
+    @apply dark:text-cyan-400;
+  }
+
+  /* KeywordConstant */
+  .chroma .kc {
+    @apply text-cyan-500;
+    @apply dark:text-cyan-400;
+  }
+
+  /* KeywordDeclaration */
+  .chroma .kd {
+    @apply text-cyan-500;
+    @apply dark:text-cyan-400;
+  }
+
+  /* KeywordNamespace */
+  .chroma .kn {
+    @apply text-red-600;
+  }
+
+  /* KeywordPseudo */
+  .chroma .kp {
+    @apply text-cyan-500;
+    @apply dark:text-cyan-400;
+  }
+
+  /* KeywordReserved */
+  .chroma .kr {
+    @apply text-cyan-500;
+    @apply dark:text-cyan-400;
+  }
+
+  /* KeywordType */
+  .chroma .kt {
+    @apply text-cyan-500;
+    @apply dark:text-cyan-400;
+  }
+
+  /* Name */
+  .chroma .n {
+  }
+
+  /* NameAttribute */
+  .chroma .na {
+    @apply text-orange-500;
+    @apply dark:text-orange-400;
+  }
+
+  /* NameBuiltin */
+  .chroma .nb {
+  }
+
+  /* NameBuiltinPseudo */
+  .chroma .bp {
+  }
+
+  /* NameClass */
+  .chroma .nc {
+    @apply text-orange-500;
+    @apply dark:text-orange-400;
+  }
+
+  /* NameConstant */
+  .chroma .no {
+    @apply text-cyan-500;
+    @apply dark:text-cyan-400;
+  }
+
+  /* NameDecorator */
+  .chroma .nd {
+    @apply text-orange-500;
+    @apply dark:text-orange-400;
+  }
+
+  /* NameEntity */
+  .chroma .ni {
+  }
+
+  /* NameException */
+  .chroma .ne {
+    @apply text-orange-500;
+    @apply dark:text-orange-400;
+  }
+
+  /* NameFunction */
+  .chroma .nf {
+    @apply text-orange-500;
+    @apply dark:text-orange-400;
+  }
+
+  /* NameFunctionMagic */
+  .chroma .fm {
+  }
+
+  /* NameLabel */
+  .chroma .nl {
+  }
+
+  /* NameNamespace */
+  .chroma .nn {
+  }
+
+  /* NameOther */
+  .chroma .nx {
+    @apply text-orange-500;
+    @apply dark:text-orange-400;
+  }
+
+  /* NameProperty */
+  .chroma .py {
+  }
+
+  /* NameTag */
+  .chroma .nt {
+    @apply text-red-600;
+  }
+
+  /* NameVariable */
+  .chroma .nv {
+  }
+
+  /* NameVariableClass */
+  .chroma .vc {
+  }
+
+  /* NameVariableGlobal */
+  .chroma .vg {
+  }
+
+  /* NameVariableInstance */
+  .chroma .vi {
+  }
+
+  /* NameVariableMagic */
+  .chroma .vm {
+  }
+
+  /* Literal */
+  .chroma .l {
+    @apply text-indigo-500;
+    @apply dark:text-indigo-400;
+  }
+
+  /* LiteralDate */
+  .chroma .ld {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralString */
+  .chroma .s {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringAffix */
+  .chroma .sa {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringBacktick */
+  .chroma .sb {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringChar */
+  .chroma .sc {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringDelimiter */
+  .chroma .dl {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringDoc */
+  .chroma .sd {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringDouble */
+  .chroma .s2 {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringEscape */
+  .chroma .se {
+    @apply text-indigo-500;
+    @apply dark:text-indigo-400;
+  }
+
+  /* LiteralStringHeredoc */
+  .chroma .sh {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringInterpol */
+  .chroma .si {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringOther */
+  .chroma .sx {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringRegex */
+  .chroma .sr {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringSingle */
+  .chroma .s1 {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralStringSymbol */
+  .chroma .ss {
+    @apply text-yellow-300;
+  }
+
+  /* LiteralNumber */
+  .chroma .m {
+    @apply text-indigo-500;
+    @apply dark:text-indigo-400;
+  }
+
+  /* LiteralNumberBin */
+  .chroma .mb {
+    @apply text-indigo-500;
+    @apply dark:text-indigo-400;
+  }
+
+  /* LiteralNumberFloat */
+  .chroma .mf {
+    @apply text-indigo-500;
+    @apply dark:text-indigo-400;
+  }
+
+  /* LiteralNumberHex */
+  .chroma .mh {
+    @apply text-indigo-500;
+    @apply dark:text-indigo-400;
+  }
+
+  /* LiteralNumberInteger */
+  .chroma .mi {
+    @apply text-indigo-500;
+    @apply dark:text-indigo-400;
+  }
+
+  /* LiteralNumberIntegerLong */
+  .chroma .il {
+    @apply text-indigo-500;
+    @apply dark:text-indigo-400;
+  }
+
+  /* LiteralNumberOct */
+  .chroma .mo {
+    @apply text-indigo-500;
+    @apply dark:text-indigo-400;
+  }
+
+  /* Operator */
+  .chroma .o {
+    @apply text-red-600;
+  }
+
+  /* OperatorWord */
+  .chroma .ow {
+    @apply text-red-600;
+  }
+
+  /* Punctuation */
+  .chroma .p {
+  }
+
+  /* Comment */
+  .chroma .c {
+    @apply text-light-text-tertiary;
+    @apply dark:text-dark-text-tertiary;
+  }
+
+  /* CommentHashbang */
+  .chroma .ch {
+    @apply text-light-text-tertiary;
+    @apply dark:text-dark-text-tertiary;
+  }
+
+  /* CommentMultiline */
+  .chroma .cm {
+    @apply text-light-text-tertiary;
+    @apply dark:text-dark-text-tertiary;
+  }
+
+  /* CommentSingle */
+  .chroma .c1 {
+    @apply text-light-text-tertiary;
+    @apply dark:text-dark-text-tertiary;
+  }
+
+  /* CommentSpecial */
+  .chroma .cs {
+    @apply text-light-text-tertiary;
+    @apply dark:text-dark-text-tertiary;
+  }
+
+  /* CommentPreproc */
+  .chroma .cp {
+    @apply text-light-text-tertiary;
+    @apply dark:text-dark-text-tertiary;
+  }
+
+  /* CommentPreprocFile */
+  .chroma .cpf {
+    @apply text-light-text-tertiary;
+    @apply dark:text-dark-text-tertiary;
+  }
+
+  /* Generic */
+  .chroma .g {
+  }
+
+  /* GenericDeleted */
+  .chroma .gd {
+    @apply text-red-600;
+  }
+
+  /* GenericEmph */
+  .chroma .ge {
+    @apply italic;
+  }
+
+  /* GenericError */
+  .chroma .gr {
+  }
+
+  /* GenericHeading */
+  .chroma .gh {
+  }
+
+  /* GenericInserted */
+  .chroma .gi {
+    @apply text-orange-500;
+    @apply dark:text-orange-400;
+  }
+
+  /* GenericOutput */
+  .chroma .go {
+  }
+
+  /* GenericPrompt */
+  .chroma .gp {
+  }
+
+  /* GenericStrong */
+  .chroma .gs {
+    font-weight: bold;
+  }
+
+  /* GenericSubheading */
+  .chroma .gu {
+    @apply text-light-text-tertiary;
+    @apply dark:text-dark-text-tertiary;
+  }
+
+  /* GenericTraceback */
+  .chroma .gt {
+  }
+
+  /* GenericUnderline */
+  .chroma .gl {
+  }
+
+  /* TextWhitespace */
+  .chroma .w {
+  }
+}
+
+@layer utilities {
+  .not-ready * {
+    @apply !transition-none;
+  }
+
+  .prose {
+    @apply break-words;
+  }
+
+  .btn-menu::before,
+  .btn-menu::after {
+    @apply block h-[2px] w-5 bg-dark-background duration-fast-01 content-[''] dark:invert;
+  }
+
+  .nav-wrapper {
+    @apply bg-light-background;
+    @apply dark:bg-dark-background;
+  }
+
+  .open {
+    @apply overflow-hidden;
+  }
+
+  .open .btn-menu::before {
+    @apply w-6 translate-y-[5.5px] rotate-45;
+  }
+
+  .open .btn-menu::after {
+    @apply w-6 -translate-y-[5.5px] -rotate-45;
+  }
+
+  .open .nav-wrapper {
+    @apply top-0;
+  }
+
+  /*******************
+	 * Grid
+	 *******************/
+
+  .mo-grid-full {
+    @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-16;
+  }
+
+  .mo-grid-content {
+    /* TODO: Responsive */
+    @apply col-span-16 grid grid-cols-subgrid;
+
+    h2,
+    h3,
+    p,
+    ol,
+    ul,
+    blockquote,
+    table {
+      @apply col-span-16;
+    }
+  }
+
+  .mo-grid-content h2:first-child {
+    @apply mt-0;
+  }
+
+  .mo-grid-content a {
+    @apply no-underline underline-offset-2 hover:underline;
+  }
+
+  .mo-subgrid-full {
+    display: inherit;
+    grid-template-columns: inherit;
+    grid-column: inherit;
+
+    @apply col-start-1;
+  }
+}

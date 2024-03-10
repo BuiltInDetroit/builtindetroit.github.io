@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<article>
+    {{ partial "event_header.html" . }}
+
+    <section class="mo-grid-full">
+        <div class="mo-grid-content">
+            {{ .Content }}
+
+            {{ partial "giscus_section.html" . }}
+        </div>
+    </section>
+</article>
+
+{{ end }}

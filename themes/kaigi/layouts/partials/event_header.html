@@ -1,0 +1,11 @@
+<header class="mb-8">
+    <div class="bg-light-layer-01 dark:bg-dark-layer-01 p-8">
+        <h1 class="mb-4">{{ .Title }}</h1>
+        <p class="mt-0">
+            {{ range $i, $e := .Params.bios }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+        </p>
+        <p class="my-0">
+            {{ .Summary }}
+        </p>
+    </div>
+</header>

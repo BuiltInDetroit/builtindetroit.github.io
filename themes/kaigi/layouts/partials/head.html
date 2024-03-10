@@ -1,0 +1,53 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>{{ if and .Title (not .IsHome) }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
+
+    <meta name="theme-color" />
+
+    {{ if eq .Kind "page" }}
+    <meta name="description" content="{{ .Summary }}" />
+    {{ else }}
+    <meta name="description" content="{{ site.Params.description }}" />
+    {{ end }}
+
+    {{ if and site.Params.author }}
+    <meta name="author" content="{{ site.Params.author }}" />
+    {{ end }}
+
+    {{ $main := resources.Get "main.css" }}
+    {{ $css := slice $main | resources.Concat "main.css" | minify }}
+    <link rel="preload stylesheet" as="style" href="{{ $css.Permalink }}" />
+
+    {{ $avatar_url := $.Scratch.Get "avatar_url" }}
+    {{ if $avatar_url }}
+    <link rel="preload" as="image" href="{{ $avatar_url }}" />
+    {{ end }}
+
+    {{ range $.Scratch.Get "social_list" }}
+    <link rel="preload" as="image" href="{{ printf `%s.svg` . | absURL }}" />
+    {{ end }}
+
+    <!-- Third-generation iPad with high-resolution Retina display. -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ `favicon144.png` | absURL }}" />
+    <!-- iPhone with high-resolution Retina display. -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ `favicon114.png` | absURL }}" />
+    <!-- First and second-generation iPad. -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ `favicon72.png` | absURL }}" />
+    <!-- Non-Retina iPhone, iPod Touch and Android 2.1+ devices. -->
+    <link rel="apple-touch-icon-precomposed" href="{{ `favicon57.png` | absURL }}" />
+    <link rel="icon" href="{{ `favicon32.png` | absURL }}" />
+
+    {{ hugo.Generator }}
+
+    {{ template "_internal/schema.html" . }}
+    {{ template "_internal/opengraph.html" . }}
+
+    {{ range .AlternativeOutputFormats }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}" />
+    {{ end }}
+
+    <link rel="canonical" href="{{ .Permalink }}" />
+</head>

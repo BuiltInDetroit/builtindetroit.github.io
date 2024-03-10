@@ -1,0 +1,11 @@
+- id: revisions_table_title
+  translation: 'Revisions'
+
+- id: revisions_table_tag_col_header
+  translation: 'Tag'
+
+- id: revisions_table_date_col_header
+  translation: 'Date'
+
+- id: revisions_table_description_col_header
+  translation: 'Description'

@@ -1,0 +1,9 @@
+#:schema https://json.schemastore.org/hugo-theme.json
+name = "Kaigi"
+license = "MIT"
+licenselink = "https://github.com/BuiltInDetroit/builtindetroit.github.io/blob/main/themes/kaigi/LICENSE"
+description = "Simple, clean Hugo theme designed for events and workshops."
+homepage = "https://github.com/BuiltInDetroit/builtindetroit.github.io/"
+tags = ["Responsive", "Simple", "Clean", "Light", "White", "Blog"]
+features = ["Responsive", "One Column", "Blog"]
+min_version = "0.121.2"
