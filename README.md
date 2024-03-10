@@ -49,7 +49,7 @@ Run the Tailwind compiler and watch for changes to the CSS, content and configur
 pnpm run serve:dev
 ```
 
-In another tab, start a development server locally to view the site:
+In another terminal, start a development server locally to view the site:
 
 ```sh
 hugo server
