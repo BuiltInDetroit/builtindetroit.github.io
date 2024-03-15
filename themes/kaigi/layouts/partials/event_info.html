@@ -1,0 +1,14 @@
+<div class="font-bold">{{ .Params.event.date | time.Format ":date_full" }}</div>
+
+<div class="mt-4">
+    {{ range $i, $e := .Params.times }}
+    <div class="{{ if $i }}text-light-text-tertiary dark:text-dark-text-tertiary{{end}}">{{
+        $e.range }} {{ $e.time_zone_abbreviation }}</div>
+    {{ end }}
+</div>
+
+<div class="mt-4">
+    <div>{{ .Params.venue.name }}</div>
+    <div>{{ .Params.venue.address1 }}</div>
+    <div>{{ .Params.venue.address2 }}</div>
+</div>

@@ -106,6 +106,9 @@ export default {
 			'light-button-primary': '#0f62fe', // Primary button color
 			'light-button-primary-hover': '#0353e9', // Hover color for 'button-primary'
 			'light-button-primary-active': '#002d9c', // Active color for 'button-primary'
+			'light-button-secondary': '#393939', // Secondary button color
+			'light-button-secondary-hover': '#4c4c4c', // Hover color for 'button-secondary'
+			'light-button-secondary-active': '#6f6f6f', // Active color for 'button-secondary'
 			// Support
 			'light-support-info': '#0043ce', // Information
 
@@ -137,6 +140,9 @@ export default {
 			'dark-button-primary': '#0f62fe', // Primary button color
 			'dark-button-primary-hover': '#0353e9', // Hover color for 'button-primary'
 			'dark-button-primary-active': '#002d9c', // Active color for 'button-primary'
+			'dark-button-secondary': '#6f6f6f', // Secondary button color
+			'dark-button-secondary-hover': '#606060', // Hover color for 'button-secondary'
+			'dark-button-secondary-active': '#393939', // Active color for 'button-secondary'
 			// Support
 			'dark-support-info': '#4589ff', // Information
 
@@ -641,7 +647,9 @@ export default {
 							blockquote: {
 								marginTop: em(20, 20),
 								marginBottom: em(20, 20),
+								paddingTop: em(20, 20),
 								paddingRight: em(20, 20),
+								paddingBottom: em(20, 20),
 								paddingLeft: em(20, 20),
 							},
 						},

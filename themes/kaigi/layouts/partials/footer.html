@@ -2,13 +2,79 @@
     class="prose prose-base dark:prose-invert prose-gray text-light-text-secondary dark:text-dark-text-secondary mx-auto flex max-w-screen-2xl px-8">
     <div class="mr-auto">
         <div class="mb-4">
-            <span>All written material, images, animations and videos on this site are licensed under the </span>
-            <a class="link" href="">Attribution-NonCommercial-ShareAlike 4.0
-                International</a>
-            license.
+            <span>
+                {{ i18n "all_assets_licensed_under" }}
+                <a class="link"
+                    href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike
+                    4.0
+                    International</a>
+                {{ i18n "license" }}.
+            </span>
+        </div>
+        <div class="mb-4">
+            <span>
+                {{ i18n "source_code_available" }} <a class="link"
+                    href="https://github.com/BuiltInDetroit/builtindetroit.github.io">{{ i18n "on_github" }}</a>.
+            </span>
         </div>
         <div class="mb-8">
-            <span>This site does not track user activity in any way.</span>
+            <span>{{ i18n "site_does_not_track" }}</span>
         </div>
     </div>
+
+    <script>
+        // base
+        const htmlClass = document.documentElement.classList;
+        setTimeout(() => {
+            htmlClass.remove('not-ready');
+        }, 10);
+
+        // mobile menu
+        const btnMenu = document.querySelector('.btn-menu');
+        btnMenu.addEventListener('click', () => {
+            htmlClass.toggle('open');
+        });
+
+        // dark theme
+        const metaTheme = document.querySelector('meta[name="theme-color"]');
+        const setDark = (isDark) => {
+            if (logoDark || logoLight) {
+                logoDark.classList.add('hidden');
+                logoLight.classList.add('hidden');
+                if (isDark) {
+                    logoDark.classList.remove('hidden');
+                } else {
+                    logoLight.classList.remove('hidden');
+                }
+            }
+            metaTheme.setAttribute('content', isDark ? '#000000' : '#ffffff');
+            htmlClass[isDark ? 'add' : 'remove']('dark');
+            console.log(isDark);
+            sessionStorage.setItem('dark', isDark);
+        };
+
+        // logo
+        let logoDark = document.getElementById('logo-dark') || null;
+        let logoLight = document.getElementById('logo-light') || null;
+
+        // init
+        const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        if (htmlClass.contains('dark')) {
+            setDark(true);
+        } else {
+            const darkVal = sessionStorage.getItem('dark');
+            setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+        }
+
+        // listen system
+        darkScheme.addEventListener('change', (event) => {
+            setDark(event.matches);
+        });
+
+        // manual switch
+        const btnDark = document.querySelector('.btn-dark');
+        btnDark.addEventListener('click', () => {
+            setDark(sessionStorage.getItem('dark') !== 'true');
+        });
+    </script>
 </footer>

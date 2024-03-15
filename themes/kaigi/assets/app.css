@@ -84,7 +84,11 @@
 	 *******************/
 
   .btn-primary {
-    @apply rounded-md bg-light-button-primary px-7 py-4 text-sm text-white no-underline duration-fast-01 hover:bg-light-button-primary-hover active:bg-light-button-primary-active dark:bg-dark-button-primary dark:hover:bg-dark-button-primary-hover dark:active:bg-dark-button-primary-active;
+    @apply inline-block rounded-md bg-light-button-primary px-7 py-4 font-bold text-white no-underline duration-fast-01 hover:bg-light-button-primary-hover active:bg-light-button-primary-active dark:bg-dark-button-primary dark:hover:bg-dark-button-primary-hover dark:active:bg-dark-button-primary-active;
+  }
+
+  .btn-secondary {
+    @apply inline-block rounded-md bg-light-button-secondary px-7 py-4 font-bold text-white no-underline duration-fast-01 hover:bg-light-button-secondary-hover active:bg-light-button-secondary-active dark:bg-dark-button-secondary dark:hover:bg-dark-button-secondary-hover dark:active:bg-dark-button-secondary-active;
   }
 
   /*******************
@@ -592,44 +596,5 @@
 
   .open .nav-wrapper {
     @apply top-0;
-  }
-
-  /*******************
-	 * Grid
-	 *******************/
-
-  .mo-grid-full {
-    @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-16;
-  }
-
-  .mo-grid-content {
-    /* TODO: Responsive */
-    @apply col-span-16 grid grid-cols-subgrid;
-
-    h2,
-    h3,
-    p,
-    ol,
-    ul,
-    blockquote,
-    table {
-      @apply col-span-16;
-    }
-  }
-
-  .mo-grid-content h2:first-child {
-    @apply mt-0;
-  }
-
-  .mo-grid-content a {
-    @apply no-underline underline-offset-2 hover:underline;
-  }
-
-  .mo-subgrid-full {
-    display: inherit;
-    grid-template-columns: inherit;
-    grid-column: inherit;
-
-    @apply col-start-1;
   }
 }

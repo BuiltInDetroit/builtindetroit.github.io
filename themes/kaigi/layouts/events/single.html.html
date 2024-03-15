@@ -1,11 +1,44 @@
 {{ define "main" }}
 
 <article>
-    {{ partial "event_header.html" . }}
+    {{ partial "site_logo.html" . }}
 
-    <section class="mo-grid-full">
-        <div class="mo-grid-content">
+    {{ partial "event_rsvp_live_stream" . }}
+
+    <header class="my-8">
+        <div>
+            <img class="my-0 h-60" {{ with .Resources.Get .Params.header_image }} src="{{ .Permalink }}" {{ end }}
+                alt="{{ .Params.header_image_alt }}" />
+        </div>
+
+        <div class="mt-8">
+            {{ partial "event_info.html" . }}
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <h2>{{ i18n "in_collaboration_with" }}</h2>
+
+            {{ range $i, $e := .Params.partners }}
+            {{ $partner_image := $.Resources.Get $e.image }}
+            <a href="{{ $e.url }}">
+                <img class="h-40" src="{{ $partner_image.Permalink }}" alt="{{ $e.image_alt }}"></img>
+            </a>
+            {{ end }}
+
+            <h2>{{ i18n "speakers" }}</h2>
+
+            {{ range $i, $e := .Params.speakers }}{{ if $i }}, {{ end }}<a href="{{ $e.bio_url }}">{{ $e.name }}</a>{{
+            end }}
+
+            <h2>{{ i18n "description" }}</h2>
+
             {{ .Content }}
+
+            <div class="mt-8">
+                {{ partial "event_rsvp_live_stream" . }}
+            </div>
 
             {{ partial "giscus_section.html" . }}
         </div>

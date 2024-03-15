@@ -5,6 +5,7 @@ defaultContentLanguageInSubdir = true
 images = []
 paginate = 1000
 theme = "kaigi"
+timeZone = "America/Detroit"
 
 [languages]
 

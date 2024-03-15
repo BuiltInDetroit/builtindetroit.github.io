@@ -5,7 +5,9 @@
 {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{ end }}
 
-<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    {{ partial "site_logo.html" . }}
 
     {{ range $pages }}
 
@@ -19,12 +21,16 @@
                 </div>
             </div>
             <div class="flex flex-col p-8 basis-1/2 min-h-80">
-                <h3 class="!mt-0 flex-grow">{{
-                    .Title }}</h3>
+                <div class="flex-grow">
+                    <h3 class="!mt-0">{{
+                        .Title }}</h3>
 
-                <p class="mb-0">
+                    {{ partial "event_info.html" . }}
+                </div>
+
+                <div class="mt-16">
                     {{ .Summary }}
-                </p>
+                </div>
             </div>
         </a>
     </div>

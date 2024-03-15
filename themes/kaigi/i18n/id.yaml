@@ -1,11 +1,32 @@
-- id: revisions_table_title
-  translation: 'Revisions'
-
-- id: revisions_table_tag_col_header
-  translation: 'Tag'
-
-- id: revisions_table_date_col_header
-  translation: 'Date'
-
-- id: revisions_table_description_col_header
+- id: description
   translation: 'Description'
+
+- id: rsvp_required_notice
+  translation: 'To attend this event in person, a RSVP is required on Meetup.com. A YouTube Live Stream is also available.'
+
+- id: rsvp_on_meetup
+  translation: 'RSVP on Meetup.com'
+
+- id: live_stream_on_youtube
+  translation: 'Live Stream on YouTube'
+
+- id: site_does_not_track
+  translation: 'This site does not track user activity in any way.'
+
+- id: all_assets_licensed_under
+  translation: 'All written material, images, animations and videos on this site are licensed under the'
+
+- id: license
+  translation: 'license'
+
+- id: source_code_available
+  translation: 'The source code for this website is available'
+
+- id: on_github
+  translation: 'on GitHub'
+
+- id: speakers
+  translation: 'Speakers'
+
+- id: in_collaboration_with
+  translation: 'In Collaboration With'
