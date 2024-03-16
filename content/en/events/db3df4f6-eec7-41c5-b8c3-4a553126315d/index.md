@@ -2,7 +2,6 @@
 title = 'Introduction to Programmable Industrial Control'
 date = 2024-03-08T17:32:44-05:00
 lastmod = 2024-03-08T17:32:44-05:00
-bios = ['Adam Cook']
 categories = ['Robotics']
 tags = ['robotics', 'industrial-automation', 'plc', 'pac', 'controllers']
 series = []

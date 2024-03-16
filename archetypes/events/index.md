@@ -2,7 +2,6 @@
 title = 'TODO: Title'
 date = {{ .Date }}
 lastmod = {{ .Date }}
-bios = ['TODO: Add all speakers associated with the event']
 categories = ['TODO: Add only one category']
 tags = ['TODO: tag1', 'TODO: tag2']
 series = ['TODO: Add optional series if a workshop event type' ]

@@ -2,7 +2,6 @@
 title = 'Tour of Industrial Automation'
 date = 2024-03-09T17:32:44-05:00
 lastmod = 2024-03-09T17:32:44-05:00
-bios = ['Adam Cook']
 categories = ['Robotics']
 tags = ['industrial-automation', 'robotics', 'manufacturing']
 series = []

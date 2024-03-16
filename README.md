@@ -52,7 +52,7 @@ pnpm run serve:dev
 In another terminal, start a development server locally to view the site:
 
 ```sh
-hugo server
+hugo server --disableFastRender
 ```
 
 To view the production site locally:
