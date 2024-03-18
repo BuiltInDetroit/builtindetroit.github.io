@@ -599,6 +599,14 @@
   }
 
   .about-content img {
-    width: 100%;
+    @apply w-full;
+  }
+
+  .btn-share::before {
+    @apply mb-1 mr-3 inline-block h-6 w-6 bg-white align-middle;
+
+    content: '';
+    mask: url('./icons/link.svg') no-repeat 50% 50%;
+    mask-size: cover;
   }
 }

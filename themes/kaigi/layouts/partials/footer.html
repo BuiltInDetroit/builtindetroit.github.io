@@ -23,6 +23,10 @@
     </div>
 
     <script>
+        ////////////////
+        // Theme
+        ////////////////
+
         // base
         const htmlClass = document.documentElement.classList;
         setTimeout(() => {
@@ -76,5 +80,27 @@
         btnDark.addEventListener('click', () => {
             setDark(sessionStorage.getItem('dark') !== 'true');
         });
+
+        ////////////////
+        // Share
+        ////////////////
+        if (navigator && navigator.clipboard) {
+            var button = document.getElementById("share-btn");
+
+            button.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.href).then(function () {
+                    button.blur();
+
+                    var oldInnerText = button.innerText;
+                    button.innerText = 'Copied!';
+
+                    setTimeout(function () {
+                        button.innerText = oldInnerText;
+                    }, 2000);
+                }, function (err) {
+                    console.log(err);
+                });
+            });
+        }
     </script>
 </footer>

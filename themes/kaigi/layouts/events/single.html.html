@@ -3,7 +3,9 @@
 <article>
     {{ partial "site_logo.html" . }}
 
-    {{ partial "event_rsvp_live_stream" . }}
+    {{ partial "share.html" . }}
+
+    {{ partial "event_rsvp_live_stream.html" . }}
 
     <header class="my-8">
         <div>
@@ -37,7 +39,7 @@
             {{ .Content }}
 
             <div class="mt-8">
-                {{ partial "event_rsvp_live_stream" . }}
+                {{ partial "event_rsvp_live_stream.html" . }}
             </div>
 
             {{ partial "giscus_section.html" . }}
