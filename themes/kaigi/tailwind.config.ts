@@ -58,6 +58,9 @@ export default {
 		{
 			pattern: /chroma+/,
 		},
+		{
+			pattern: /about+/,
+		},
 	],
 	darkMode: 'class',
 	theme: {
@@ -647,9 +650,9 @@ export default {
 							blockquote: {
 								marginTop: em(20, 20),
 								marginBottom: em(20, 20),
-								paddingTop: em(20, 20),
+								paddingTop: em(10, 20),
 								paddingRight: em(20, 20),
-								paddingBottom: em(20, 20),
+								paddingBottom: em(10, 20),
 								paddingLeft: em(20, 20),
 							},
 						},

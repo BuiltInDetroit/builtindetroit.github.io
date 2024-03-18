@@ -597,4 +597,8 @@
   .open .nav-wrapper {
     @apply top-0;
   }
+
+  .about-content img {
+    width: 100%;
+  }
 }
