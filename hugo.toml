@@ -20,6 +20,7 @@ weight = 20
 [languages.en.params]
 description = "Open industrial technology education and engagement. Built in Detroit. By Detroit."
 author = "Built In Detroit Project Contributors"
+contact_form_url = "https://forms.gle/ZApLv8P35npwMAKd9"
 
 [menu]
 

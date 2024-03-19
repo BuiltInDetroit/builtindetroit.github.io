@@ -56,9 +56,6 @@ export default {
 			pattern: /bg-teal+/,
 		},
 		{
-			pattern: /chroma+/,
-		},
-		{
 			pattern: /about+/,
 		},
 	],
@@ -507,6 +504,10 @@ export default {
 				DEFAULT: {
 					css: [
 						{
+							a: {
+								fontWeight: '500',
+								textDecoration: 'none',
+							},
 							strong: {
 								fontWeight: '700',
 							},

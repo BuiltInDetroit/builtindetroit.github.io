@@ -13,10 +13,13 @@
         {{ with site.Menus.main }}
         <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
             {{ range . }}
-            <a class="text-light-text-primary dark:text-dark-text-primary link block text-center text-2xl leading-[5rem] lg:text-base font-bold"
-                href="{{ .URL | relLangURL }}">{{ .Name
-                }}</a>
+            <a class="nav-link-top" href="{{ .URL | relLangURL }}">
+                {{ .Name }}
+            </a>
             {{ end }}
+            <a class="nav-link-top" href="{{ site.Params.contact_form_url }}">
+                {{ i18n "contact_us" }}
+            </a>
         </nav>
         {{ end }}
 
