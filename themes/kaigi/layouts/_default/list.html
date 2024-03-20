@@ -16,7 +16,7 @@
             href="{{ .Permalink }}">
             <div class="basis-1/2">
                 <div>
-                    <img class="my-0" {{ with .Resources.Get .Params.tile_image }} src="{{ .Permalink }}" {{ end }}
+                    <img class="!my-0" {{ with .Resources.Get .Params.tile_image }} src="{{ .Permalink }}" {{ end }}
                         alt="{{ .Params.tile_image_alt }}" />
                 </div>
             </div>

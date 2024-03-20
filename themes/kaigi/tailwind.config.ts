@@ -577,9 +577,64 @@ export default {
 						},
 					],
 				},
+				sm: {
+					css: [
+						{
+							fontSize: rem(16),
+							lineHeight: round(24 / 16),
+							p: {
+								marginTop: em(18, 16),
+								marginBottom: em(18, 16),
+							},
+							h1: {
+								fontSize: em(32, 16),
+								marginTop: '0',
+								marginBottom: em(32, 32),
+								lineHeight: rem(40),
+							},
+							h2: {
+								fontSize: em(28, 16),
+								marginTop: em(45, 28),
+								marginBottom: em(22, 28),
+								lineHeight: rem(36),
+							},
+							h3: {
+								fontSize: em(20, 16),
+								marginTop: em(25, 20),
+								marginBottom: em(16, 20),
+								lineHeight: rem(28),
+							},
+							h4: {
+								fontSize: em(20, 16),
+								marginTop: em(25, 20),
+								marginBottom: em(16, 20),
+								lineHeight: rem(28),
+							},
+							ol: {
+								marginTop: em(16, 16),
+								marginBottom: em(16, 16),
+								paddingLeft: em(24, 16),
+							},
+							ul: {
+								marginTop: em(16, 16),
+								marginBottom: em(16, 16),
+								paddingLeft: em(24, 16),
+							},
+							blockquote: {
+								marginTop: em(20, 20),
+								marginBottom: em(20, 20),
+								paddingTop: em(10, 20),
+								paddingRight: em(20, 20),
+								paddingBottom: em(10, 20),
+								paddingLeft: em(20, 20),
+							},
+						},
+					],
+				},
 				base: {
 					css: [
 						{
+							fontSize: rem(16),
 							lineHeight: round(24 / 16),
 							p: {
 								marginTop: em(16, 16),
