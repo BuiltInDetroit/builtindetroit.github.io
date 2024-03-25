@@ -2,7 +2,7 @@
   translation: 'Description'
 
 - id: rsvp_required_notice
-  translation: 'To attend this event in person in Detroit, a RSVP is required on Meetup.com. Please do not RSVP if you are just interested in the YouTube Live Stream.'
+  translation: 'To attend this event in person in Detroit, a RSVP is required on Eventbrite or Meetup.com. Please do not RSVP if you are just interested in the YouTube Live Stream.'
 
 - id: rsvp_on_meetup
   translation: 'RSVP on Meetup.com'
@@ -36,3 +36,6 @@
 
 - id: contact_us
   translation: 'Contact Us'
+
+- id: rsvp_on_eventbrite
+  translation: 'RSVP on Eventbrite'

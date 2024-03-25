@@ -83,12 +83,16 @@
 	 * Buttons
 	 *******************/
 
+  .btn {
+    @apply inline-block rounded-md px-7 py-4 font-bold !no-underline duration-fast-01 sm:max-md:w-full sm:max-md:text-center;
+  }
+
   .btn-primary {
-    @apply inline-block rounded-md bg-light-button-primary px-7 py-4 font-bold text-white !no-underline duration-fast-01 hover:bg-light-button-primary-hover active:bg-light-button-primary-active dark:bg-dark-button-primary dark:hover:bg-dark-button-primary-hover dark:active:bg-dark-button-primary-active;
+    @apply bg-light-button-primary  text-white hover:bg-light-button-primary-hover active:bg-light-button-primary-active dark:bg-dark-button-primary dark:hover:bg-dark-button-primary-hover dark:active:bg-dark-button-primary-active;
   }
 
   .btn-secondary {
-    @apply inline-block rounded-md bg-light-button-secondary px-7 py-4 font-bold text-white !no-underline duration-fast-01 hover:bg-light-button-secondary-hover active:bg-light-button-secondary-active dark:bg-dark-button-secondary dark:hover:bg-dark-button-secondary-hover dark:active:bg-dark-button-secondary-active;
+    @apply bg-light-button-secondary text-white hover:bg-light-button-secondary-hover active:bg-light-button-secondary-active dark:bg-dark-button-secondary dark:hover:bg-dark-button-secondary-hover dark:active:bg-dark-button-secondary-active;
   }
 
   /*******************

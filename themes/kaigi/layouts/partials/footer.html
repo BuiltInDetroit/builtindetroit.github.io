@@ -93,20 +93,22 @@
         if (navigator && navigator.clipboard) {
             var button = document.getElementById("share-btn");
 
-            button.addEventListener('click', function () {
-                navigator.clipboard.writeText(window.location.href).then(function () {
-                    button.blur();
+            if (button) {
+                button.addEventListener('click', function () {
+                    navigator.clipboard.writeText(window.location.href).then(function () {
+                        button.blur();
 
-                    var oldInnerText = button.innerText;
-                    button.innerText = 'Copied!';
+                        var oldInnerText = button.innerText;
+                        button.innerText = 'Copied!';
 
-                    setTimeout(function () {
-                        button.innerText = oldInnerText;
-                    }, 2000);
-                }, function (err) {
-                    console.log(err);
+                        setTimeout(function () {
+                            button.innerText = oldInnerText;
+                        }, 2000);
+                    }, function (err) {
+                        console.log(err);
+                    });
                 });
-            });
+            }
         }
     </script>
 </footer>

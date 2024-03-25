@@ -17,8 +17,9 @@ videos = []
 
 [event]
 type = 'meeting'
-date = 2024-04-11
-in_person_rsvp_url = 'https://www.meetup.com/builtindetroit/events/299626813/'
+date = 2024-04-13
+in_person_rsvp_url = 'https://www.eventbrite.com/e/tour-of-industrial-automation-tickets-869592824547?aff=oddtdtcreator'
+in_person_rsvp_url2 = 'https://www.meetup.com/builtindetroit/events/299626813/'
 livestream_url = 'https://www.youtube.com/live/4EUM3oeFah8?si=oO_MXvwAyVuGP5sO'
 
 [venue]
@@ -27,15 +28,15 @@ address1 = '440 Burroughs Street'
 address2 = 'Detroit, MI 48202'
 
 [[times]]
-range = '5:00 PM - 7:00 PM'
+range = '12:00 PM - 2:00 PM'
 time_zone_abbreviation = 'EDT'
 
 [[times]]
-range = '4:00 PM - 6:00 PM'
+range = '11:00 AM - 1:00 PM'
 time_zone_abbreviation = 'CDT'
 
 [[times]]
-range = '2:00 PM - 4:00 PM'
+range = '9:00 AM - 11:00 PM'
 time_zone_abbreviation = 'PDT'
 
 [[speakers]]

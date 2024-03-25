@@ -19,6 +19,7 @@ videos = []
 type = 'meeting'
 date = 2024-01-01
 in_person_rsvp_url = ''
+in_person_rsvp_url2 = ''
 livestream_url = ''
 
 [venue]
