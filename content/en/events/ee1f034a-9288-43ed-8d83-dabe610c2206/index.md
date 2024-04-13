@@ -20,7 +20,7 @@ type = 'meeting'
 date = 2024-04-13
 in_person_rsvp_url = 'https://www.eventbrite.com/e/tour-of-industrial-automation-tickets-869592824547?aff=oddtdtcreator'
 in_person_rsvp_url2 = 'https://www.meetup.com/builtindetroit/events/299626813/'
-livestream_url = 'https://www.youtube.com/live/4EUM3oeFah8?si=oO_MXvwAyVuGP5sO'
+livestream_url = 'https://www.youtube.com/watch?v=7gaUlBJBLNU'
 
 [venue]
 name = 'TechTown Detroit'
