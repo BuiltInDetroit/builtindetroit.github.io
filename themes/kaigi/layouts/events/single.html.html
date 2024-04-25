@@ -6,11 +6,7 @@
     {{ partial "share.html" . }}
 
     <header class="my-8">
-        <div>
-            <img class="my-0 h-60" {{ with .Resources.Get .Params.header_image }} src="{{ .Permalink }}" {{ end }}
-                alt="{{ .Params.header_image_alt }}" />
-        </div>
-
+        <h1>{{ .Title }}</h1>
         <div class="mt-8">
             {{ partial "event_info.html" . }}
         </div>

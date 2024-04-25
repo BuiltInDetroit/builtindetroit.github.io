@@ -5,14 +5,25 @@
         </p>
     </blockquote>
     <div class="mt-4">
-        <a class="btn btn-primary" href="{{ .Params.event.in_person_rsvp_url }}">
-            {{ i18n "rsvp_on_eventbrite" }}
-        </a>
-        <a class="btn mt-4 md:mt-0 md:ml-2 btn-primary" href="{{ .Params.event.in_person_rsvp_url2 }}">
+        {{ $rsvp_url := .Params.event.in_person_rsvp_url }}
+        {{ if $rsvp_url }}
+        <a class="btn btn-primary" href="{{ $rsvp_url }}">
             {{ i18n "rsvp_on_meetup" }}
         </a>
-        <a class="btn mt-4 md:mt-0 md:ml-2 btn-secondary" href="{{ .Params.event.livestream_url }}">
+        {{ end }}
+
+        {{ $rsvp_url2 := .Params.event.in_person_rsvp_url2 }}
+        {{ if $rsvp_url2 }}
+        <a class="btn mt-4 md:mt-0 md:ml-2 btn-primary" href="{{ $rsvp_url2 }}">
+            {{ i18n "rsvp_on_eventbrite" }}
+        </a>
+        {{ end }}
+
+        {{ $livestream_url := .Params.event.livestream_url }}
+        {{ if $livestream_url }}
+        <a class="btn mt-4 md:mt-0 md:ml-2 btn-secondary" href="{{ $livestream_url }}">
             {{ i18n "live_stream_on_youtube" }}
         </a>
+        {{ end }}
     </div>
 </section>

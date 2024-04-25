@@ -11,8 +11,6 @@ draft = false
 images = ['opengraph.png']
 tile_image = 'tile.jpg'
 tile_image_alt = 'A photograph of an automotive body-in-white line in a modern automotive plant. The robots are yellow and red.'
-header_image = 'header.svg'
-header_image_alt = 'Logo for the Tour of Industrial Automation event. The logo is the name of the event in bold font filled in by red and blue swirls of color.'
 videos = []
 
 [event]

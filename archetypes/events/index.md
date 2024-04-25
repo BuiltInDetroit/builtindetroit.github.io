@@ -11,8 +11,6 @@ draft = true
 images = ['opengraph.png']
 tile_image = 'tile.svg'
 tile_image_alt = 'TODO: Alternate text that briefly describes the tile image for visually-impaired users.'
-header_image = 'header.svg'
-header_image_alt = 'TODO: Alternate text that briefly describes the tile image for visually-impaired users.'
 videos = []
 
 [event]
