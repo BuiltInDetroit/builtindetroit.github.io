@@ -18,7 +18,7 @@ type = 'meeting'
 date = 2024-05-11
 in_person_rsvp_url = 'https://www.meetup.com/builtindetroit/events/299670151/'
 in_person_rsvp_url2 = ''
-livestream_url = 'https://www.youtube.com/@smechapter153'
+livestream_url = 'https://youtube.com/live/qYficacF-aw?feature=share'
 
 [venue]
 name = 'TechTown Detroit'
