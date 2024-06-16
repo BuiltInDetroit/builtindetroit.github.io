@@ -1,5 +1,5 @@
 +++
-title = 'Industrial Motion Control'
+title = 'Industrial Motion Control, Sponsored by Bamboo Detroit'
 date = 2024-06-10T13:37:58-04:00
 lastmod = 2024-06-10T13:37:58-04:00
 categories = ['Robotics']
@@ -21,9 +21,9 @@ in_person_rsvp_url2 = ''
 livestream_url = 'https://www.youtube.com/@SMEChapter153'
 
 [venue]
-name = 'TechTown Detroit'
-address1 = '440 Burroughs Street'
-address2 = 'Detroit, MI 48202'
+name = 'Bamboo Detroit'
+address1 = '1420 Washington Blvd, Suite 301'
+address2 = 'Detroit, MI 48226'
 
 [[times]]
 range = '6:00 PM - 8:00 PM'
@@ -59,3 +59,5 @@ In this presentation, we will touch on the following:
 - Overview of common motion control system architectures.
 - Mechanical and electromechanical design and tradeoffs of various motors.
 - Typical positional feedback components and pathways.
+- Introduction to control theory and modeling.
+- Brief introduction to industrial ethernet and fieldbus (for subsequent events).
